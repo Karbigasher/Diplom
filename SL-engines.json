@@ -1,0 +1,47 @@
+[
+    {
+
+        "name":"СЛ-М",
+        "nominal_Power":"2.0",
+        "nominal_rotationFrequency":"5700",
+        "nominal_Torque":"3.5",
+        "Rotor_torque":"2400",
+        "D":"33",
+        "L":"60",
+        "d":"-",
+        "l":"-"
+    },
+    {
+        "name":"СЛ-220",
+        "nominal_Power":"3.6",
+        "nominal_rotationFrequency":"3500",
+        "nominal_Torque":"10",
+        "Rotor_torque":"-",
+        "D":"85",
+        "L":"-",
+        "d":"-",
+        "l":"-"
+    },
+    {
+        "name":"СЛ-123",
+        "nominal_Power":"5.5",
+        "nominal_rotationFrequency":"4500",
+        "nominal_Torque":"12",
+        "Rotor_torque":"3900",
+        "D":"50",
+        "L":"88",
+        "d":"4",
+        "l":"7"
+    },
+    {
+        "name":"СЛ-121",
+        "nominal_Power":"7.5",
+        "nominal_rotationFrequency":"4500",
+        "nominal_Torque":"12",
+        "Rotor_torque":"3900",
+        "D":"50",
+        "L":"88",
+        "d":"4",
+        "l":"7"
+    }
+]
