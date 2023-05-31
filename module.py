@@ -1,11 +1,9 @@
 import numpy as np
 import pandas as pd
 
-def main():
+def module(d_engine, M):
 
     modules = pd.read_fwf("possible_modules.txt")
-    d_engine = 7
-    M = 44
     z = 20
     module = d_engine/11
     
@@ -17,9 +15,13 @@ def main():
     print(f'hut {module}')
     print(sig)
     
+    return module
+    
 
 
 
 
 if __name__=="__main__":
-    main()
+    d_engine = 7
+    M = 44
+    module(d_engine, M)
