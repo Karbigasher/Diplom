@@ -15,7 +15,7 @@ def Optim(steps_gearRatio, *args):
 
 def optim_bistr(general_gearRatio, m, steps):
     z = 20
-    initial_guess=np.full((4),general_gearRatio/np.exp(steps))
+    initial_guess=np.full((steps),general_gearRatio/np.exp(steps))
     constraints = [NonlinearConstraint(Optim, 0, np.inf), {
         'type': 'eq', 'fun': lambda x: np.prod(x) - general_gearRatio}]
     bonds = Bounds(lb=3, ub=6)
@@ -25,6 +25,7 @@ def optim_bistr(general_gearRatio, m, steps):
                     constraints=constraints, bounds=bonds)
     print(resh.x, resh.fun)
 
+    return np.around(resh.x,1), np.around(resh.fun, 1)
 if __name__ == "__main__":
     m = 0.5
     general_gearRatio = 210
