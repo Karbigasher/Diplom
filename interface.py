@@ -74,7 +74,7 @@ class UI(QTabWidget):
         for i in range(int(self.lineedit4.text())):
             self.plainTextEdit.appendPlainText(
                 f"{i+1}-я ступень U = {ratioPerStep[i]}")
-        self.plainTextEdit.appendPlainText(f"общая погрешность {bistr}")
+        self.plainTextEdit.appendPlainText(f"момент инерции механизма {bistr} кг*м2")
 
     def optimMert_bttn(self):
         self.plainTextEdit2.clear()
@@ -84,7 +84,7 @@ class UI(QTabWidget):
         for i in range(int(self.lineedit7.text())):
             self.plainTextEdit2.appendPlainText(
                 f"{i+1}-я ступень U = {ratioPerStep[i]}")
-        self.plainTextEdit2.appendPlainText(f"общая погрешность {bistr}")
+        self.plainTextEdit2.appendPlainText(f"суммарный мёртвый ход {bistr} угл. мин.")
 
     def closeEvent(self, event):
         QApplication.quit()
