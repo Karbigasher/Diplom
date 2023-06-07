@@ -1,5 +1,5 @@
 import numpy as np
-from scipy.optimize import minimize, NonlinearConstraint, Bounds
+from scipy.optimize import minimize, Bounds
 
 
 def Optim(steps_gearRatio, *args):
@@ -16,8 +16,8 @@ def Optim(steps_gearRatio, *args):
 def optim_bistr(general_gearRatio, m, steps):
     z = 20
     initial_guess = np.full((steps), general_gearRatio/np.exp(steps))
-    constraints = [NonlinearConstraint(Optim, 0, np.inf), {
-        'type': 'eq', 'fun': lambda x: np.prod(x) - general_gearRatio}]
+    constraints = {
+        'type': 'eq', 'fun': lambda x: np.prod(x) - general_gearRatio}
     bonds = Bounds(lb=3, ub=6)
 
     print(Optim(initial_guess))
