@@ -79,12 +79,12 @@ class UI(QTabWidget):
     def optimMert_bttn(self):
         self.plainTextEdit2.clear()
         self.plainTextEdit2.appendPlainText("Результаты оптимизации схемы:")
-        ratioPerStep, bistr = optim_mert(int(self.lineedit6.text()), float(
+        ratioPerStep, mert = optim_mert(int(self.lineedit6.text()), float(
             self.lineedit3.text()), int(self.lineedit7.text()))
         for i in range(int(self.lineedit7.text())):
             self.plainTextEdit2.appendPlainText(
                 f"{i+1}-я ступень U = {ratioPerStep[i]}")
-        self.plainTextEdit2.appendPlainText(f"суммарный мёртвый ход {bistr} угл. мин.")
+        self.plainTextEdit2.appendPlainText(f"суммарный мёртвый ход {mert} угл. мин.")
 
     def closeEvent(self, event):
         QApplication.quit()
